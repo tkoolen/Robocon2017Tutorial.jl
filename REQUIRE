@@ -2,3 +2,4 @@ julia 0.5
 IJulia 1.4.1
 RigidBodyDynamics 0.0.4
 SymPy 0.4.0
+Plots 0.10.3
