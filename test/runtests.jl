@@ -1,5 +1,19 @@
 using Robocon2017Tutorial
 using Base.Test
 
-# write your own tests here
-@test 1 == 2
+const module_tempdir = joinpath(Base.tempdir(), string(module_name(current_module())))
+
+@testset "example notebooks" begin
+    using IJulia
+
+    outputdir = module_tempdir
+    if !isdir(outputdir)
+        mkpath(outputdir)
+    end
+    jupyter = IJulia.jupyter
+    for f in filter(x -> endswith(x, "ipynb"), readdir("../notebooks"))
+        notebook = joinpath("..", "notebooks", f)
+        output = joinpath(outputdir, f)
+        @test begin run(`$jupyter nbconvert --to notebook --execute $notebook --output $output --ExecutePreprocessor.timeout=90`); true end
+    end
+end
