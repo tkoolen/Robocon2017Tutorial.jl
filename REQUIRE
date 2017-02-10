@@ -3,3 +3,4 @@ IJulia 1.4.1
 RigidBodyDynamics 0.0.4
 SymPy 0.4.0
 RigidBodyTreeInspector
+Plots 0.10.3
