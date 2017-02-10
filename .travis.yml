@@ -19,6 +19,7 @@ branches:
   # - export PATH=`pwd`/cmake-3.7.2-Linux-x86_64/bin:$PATH
 
 # uncomment the following lines to override the default test script
-#script:
-#  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
-#  - julia -e 'Pkg.clone(pwd()); Pkg.build("Robocon2017Tutorial"); Pkg.test("Robocon2017Tutorial"; coverage=true)'
+script:
+ - julia -e 'Pkg.clone("https://github.com/rdeits/DrakeVisualizer.jl"); Pkg.checkout("DrakeVisualizer", "robocon2017"); Pkg.build("DrakeVisualizer")'
+ - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+ - julia -e 'Pkg.clone(pwd()); Pkg.build("Robocon2017Tutorial"); Pkg.test("Robocon2017Tutorial"; coverage=true)'
