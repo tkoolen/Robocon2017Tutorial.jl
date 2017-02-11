@@ -12,6 +12,11 @@ const module_tempdir = joinpath(Base.tempdir(), string(module_name(current_modul
     end
     jupyter = IJulia.jupyter
     for f in filter(x -> endswith(x, "ipynb"), readdir("../notebooks"))
+        if contains(f, "JuMP")
+            if Pkg.installed("Gurobi") === nothing
+                continue
+            end
+        end
         notebook = joinpath("..", "notebooks", f)
         output = joinpath(outputdir, f)
         @test begin run(`$jupyter nbconvert --to notebook --execute $notebook --output $output --ExecutePreprocessor.timeout=90`); true end
