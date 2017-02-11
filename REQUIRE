@@ -8,3 +8,4 @@ GR 0.19
 BenchmarkTools 0.0.7
 Images 0.5.14
 @osx QuartzImageIO 0.1.4
+Interact 0.4.3
