@@ -5,4 +5,4 @@ SymPy 0.4.0
 Plots 0.10.3
 JuMP 0.15
 GR 0.19
-ECOS 0.7
+Ipopt 0.2.6
