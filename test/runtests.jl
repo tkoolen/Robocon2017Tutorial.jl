@@ -17,10 +17,6 @@ const module_tempdir = joinpath(Base.tempdir(), string(module_name(Robocon2017Tu
                 continue
             end
         end
-        if contains(f, "Getting Started")
-            # manipulate results in trouble
-            continue
-        end
         notebook = joinpath("..", "notebooks", f)
         output = joinpath(outputdir, f)
         @test begin run(`$jupyter nbconvert --to notebook --execute $notebook --output $output --ExecutePreprocessor.timeout=90`); true end
