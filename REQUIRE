@@ -8,5 +8,6 @@ GR 0.19
 BenchmarkTools 0.0.7
 Images 0.5.14
 @osx QuartzImageIO 0.1.4
+@linux ImageMagick 0.2.1
 Interact 0.4.3
 MacroTools 0.3 0.3.4
