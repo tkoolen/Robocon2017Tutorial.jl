@@ -5,3 +5,5 @@ SymPy 0.4.0
 Plots 0.10.3
 JuMP 0.15
 GR 0.19
+BenchmarkTools 0.0.7
+Images 0.5.14
