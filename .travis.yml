@@ -13,7 +13,6 @@ notifications:
 branches:
   only: master
 before_install:
-  - sudo apt-get install gfortran -y
   # install a newer version of CMake for LCMCore
   # - wget https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz --no-check-certificate
   # - tar -xzf cmake-3.7.2-Linux-x86_64.tar.gz
