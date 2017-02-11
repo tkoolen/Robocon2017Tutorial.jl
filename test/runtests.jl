@@ -1,7 +1,7 @@
 using Robocon2017Tutorial
 using Base.Test
 
-const module_tempdir = joinpath(Base.tempdir(), string(module_name(current_module())))
+const module_tempdir = joinpath(Base.tempdir(), string(module_name(Robocon2017Tutorial)))
 
 @testset "example notebooks" begin
     using IJulia
