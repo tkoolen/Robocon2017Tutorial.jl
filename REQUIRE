@@ -12,3 +12,5 @@ MacroTools 0.3 0.3.4
 @osx QuartzImageIO 0.1.4
 @linux ImageMagick 0.2.1
 @windows ImageMagick 0.2.1
+StaticArrays 0.1.0 0.1.5- # due to https://github.com/JuliaArrays/StaticArrays.jl/issues/103
+
