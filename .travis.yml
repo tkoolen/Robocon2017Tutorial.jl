@@ -13,8 +13,9 @@ notifications:
 branches:
   only: master
 before_install:
-  - sudo apt-get install gcc gfortran python-numpy -y
-  - export PYTHON=`which python`
+  - sudo apt-get install gcc gfortran -y
+  - export PYTHON=""
+  - julia -e 'Pkg.add("Conda"); using Conda; Conda.add("numpy")'
 
 script:
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
